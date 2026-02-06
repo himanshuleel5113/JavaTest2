@@ -1,0 +1,18 @@
+package test2;
+abstract class Payment{
+    abstract void pay(int amount);
+}
+class CreditCardPayment extends Payment{
+    @Override
+    void pay(int amount){
+        System.out.println("Payment Done Using CreditCardPayment");
+        System.out.println("Amount Paid:"+amount);
+    }
+}
+class UPIPayment extends Payment{
+    @Override
+    void pay(int amount){
+        System.out.println("Payment Done Using UPIPayment");
+        System.out.println("Amount paid:"+amount);
+    }
+}

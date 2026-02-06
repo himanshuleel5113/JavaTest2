@@ -1,0 +1,29 @@
+package test2;
+
+public class Student {
+    String name;
+    int marksObtained;
+    static String collegeName = "LPU";
+    static final int MAX_MARKS = 100;
+    Student(String name, int marksObtained){
+        this.name = name;
+        this.marksObtained = marksObtained;
+    }
+    public void printPercentage(){
+        double percentage = ((double) marksObtained/MAX_MARKS)*100;
+        System.out.println("Name: " +name);
+        System.out.println("College: " +collegeName);
+        System.out.println("Marks Obtained: "+marksObtained);
+        System.out.printf("Percentage: %.2f%%",percentage);
+        System.out.println("\n");
+    }
+    public static void main(String[] args){
+        Student s1 = new Student("Rahul",87);
+        Student s2 = new Student("Ananya",92);
+
+        s1.printPercentage();
+        s2.printPercentage();
+
+        System.out.println("College for all students: " + Student.collegeName);
+    }
+}

@@ -1,0 +1,13 @@
+package test2;
+
+public class PaymentMain {
+    public static void main(String[] args){
+        Payment payment = new CreditCardPayment();
+        payment.pay(100000);
+
+        System.out.println();
+
+        payment = new UPIPayment();
+        payment.pay(-20);
+    }
+}
